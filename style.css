@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: #111111;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app {
+    display: flex;
+    width: 92%;
+    height: 92%;
+    gap: 20px;
+}
+
+.left-panel {
+    flex: 3;
+    padding: 30px;
+}
+
+.right-panel {
+    flex: 1;
+    padding: 25PX;
+    border-left:1px solid #222222;
+    background:#1A1A1A;
+    border-radius:12px;
+    overflow-y:auto; /*ensures scroll for many laps.*/
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+
+.accent {
+    color: #FFD300;
+}
+
+.time-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.time-block {
+    background-color: #1A1A1A;
+    padding: 28px 22px;
+    border-radius: 18px;
+    min-width: 120px;/*ensures blocks don't get small on mobile.*/
+    text-align: center;
+    border: 1px solid #222222;
+}
+
+.time-digit {
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #FFD300;
+    text-shadow: none;
+}
+
+.ms-color{
+  color:#FFFFFF;
+  text-shadow:none;
+}
+
+.label {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+.btn{
+  width:68px;
+  height:68px;
+  border-radius:50%;
+  border:none;
+  font-size:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  transition:.25s ease;/*Starts fast ➜ slows down smoothly at the end.*/
+}
+
+.btn:hover{
+  transform:scale(1.08);
+}
+
+.start{
+  background:#FFD300;
+  color:#000000;
+}
+
+.reset{
+  background:#FFFFFF;
+  color:#000000;
+}
+
+.lap{
+  background:#313131;
+  color:#FFFFFF;
+}
+
+.laps-box {
+    background: #1A1A1A;
+    height: 310px;
+    overflow-y: auto;
+    border-radius: 12px;
+    border: 1px solid #222222;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;/*Merges (collapses) cell borders into one border.*/
+}
+
+th, td{
+  padding:10px;
+  font-size:14px;
+  text-align:center;
+  border-bottom:1px solid #222222;
+}
+
+.no-laps{
+  text-align:center;
+  padding:20px 0;
+  opacity:0.6;
+}
+
+.history-header{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  margin-bottom:12px;
+  opacity:.9;
+}
+
+.saved-badge{
+  background:#FFD300;
+  color:#000000;
+  padding:4px 10px;
+  border-radius:8px;
+  font-size:12px;
+}
+
+.history-list .item{
+  background:#1A1A1A;
+  border:1px solid #222222;
+  padding:12px;
+  border-radius:10px;
+  margin-bottom:10px;
+  color:#FFFFFF;
+}

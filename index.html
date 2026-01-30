@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StopWatch</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="app">
+            <div class="left-panel">
+                <h2 class="title">Time <span class="accent">Tracker</span></h2>
+                <div class="time-display">
+                    <div class="time-block">
+                        <span id="min" class="time-digit">00</span>
+                        <span class="label">MIN</span>
+                    </div>
+
+                    <span class="dot">:</span>
+
+                    <div class="time-block">
+                        <span id="sec" class="time-digit">00</span>
+                        <span class="label">SEC</span>
+                    </div>
+
+                    <span class="dot">:</span>
+
+                    <div class="time-block">
+                        <span id="ms" class="time-digit ms-color">00</span>
+                        <span class="label">MS</span>
+                    </div>
+                </div>
+
+                <!--Control Buttons-->
+                <div class="controls">
+                    <button id="resetBtn" class="btn reset">⟳</button>
+                    <button id="startBtn" class="btn start">▶</button>
+                    <button id="lapBtn" class="btn lap">⚑</button>
+                </div>
+
+                <!--Lap display section-->
+                <div class="laps-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>LAP NO.</th>
+                                <th>SPLIT</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="laps"></tbody>
+                    </table>
+                    <p id="no-laps" class="no-laps">No laps recorded</p>
+                </div>
+            </div>
+
+             <!--Right panel-->
+                <div class="right-panel">
+                    <div class="history-header">
+                        <span>Session History</span>
+                        <span id="savedCount" class="saved-badge">0 Saved</span>
+                    </div>
+
+                    <div id="historyList" class="history-list"></div>
+                </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
